@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+
+
+        $(document).ready(function () {
+            $("#shutdown").click(function () {
+                $.get("http://natebotsecure.azurewebsites.net/api/off", function (data, status) {
+
+                });
+            });
+        });
+    </script>
+</head>
+</br>
+</br>
+<p>Authorized users can use this app to control the Garage Bot</p>
+<p><button class="speed-btn  btn-primary speed-btn" id="shutdown">Shown Down the Pi</button></p>
+</html>

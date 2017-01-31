@@ -1,0 +1,139 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+
+
+        $(document).ready(function () {
+            $("#forward").click(function () {
+                $.get("http://natebotsecure.azurewebsites.net/api/forward", function (data, status) {
+
+                });
+            });
+            $("#stop").click(function () {
+                $.get("http://natebotsecure.azurewebsites.net/api/stop", function (data, status) {
+
+                });
+            });
+            $("#backward").click(function () {
+                $.get("http://natebotsecure.azurewebsites.net/api/reverse", function (data, status) {
+
+                });
+            });
+            $("#left").click(function () {
+                $.get("http://natebotsecure.azurewebsites.net/api/left", function (data, status) {
+
+                });
+            });
+            $("#right").click(function () {
+                $.get("http://natebotsecure.azurewebsites.net/api/right", function (data, status) {
+
+                });
+            });
+            $("#spinleft").click(function () {
+                $.get("http://natebotsecure.azurewebsites.net/api/spinleft", function (data, status) {
+
+                });
+            });
+            $("#spinright").click(function () {
+                $.get("http://natebotsecure.azurewebsites.net/api/spinright", function (data, status) {
+
+                });
+            });
+            $("#fast").click(function () {
+                $("#fast").css("background-color", "#0043ff");
+                $("#medium").css("background-color", "#428bca");
+                $("#slow").css("background-color", "#428bca");
+                $.get("http://natebotsecure.azurewebsites.net/api/fast", function (data, status) {
+                });
+            });
+
+            $("#medium").click(function () {
+                $("#medium").css("background-color", "#0043ff");
+                $("#fast").css("background-color", "#428bca");
+                $("#slow").css("background-color", "#428bca");
+                $.get("http://natebotsecure.azurewebsites.net/api/medium", function (data, status) {
+                });
+            });
+
+            $("#slow").click(function () {
+                $("#slow").css("background-color", "#0043ff");
+                $("#medium").css("background-color", "#428bca");
+                $("#fast").css("background-color", "#428bca");
+                $.get("http://natebotsecure.azurewebsites.net/api/slow", function (data, status) {
+                });
+            });
+
+        });
+
+    </script>
+</head>
+<body style="height:100%;">
+    <div id="MyBot">
+        <table>
+            <tr class="myrow">
+                  <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <button class="forward btn btn-primary btn-lg" id="forward">Move Forward</button>
+                            </td>
+                            <td>
+                                <table>
+
+                                    <tr>
+                                        <TD><button class="speed-btn  btn-primary speed-btn" id="fast">Fast</button></TD>
+                                    </tr>
+                                    <tr>
+                                        <TD><button class="speed-btn  btn-primary speed-btn" id="medium">Medium</button></TD>
+                                    </tr>
+                                    <tr>
+                                        <td><button class="speed-btn  btn-primary speed-btn" id="slow">Slow</button></td>
+                                    </tr>
+                                </table>
+                            </td>
+                    </table>
+                </td>
+                <td> <table>
+                        <tr>
+                            
+                            <td class="commands">
+                                <p><b>Current Command:</b> </br>@Model.CurrentCommand</p>
+                                <p><b>Current Speed:</b></br> @Model.CurrentSpeed</p>
+                            </td>
+                        </tr>
+                    </table></td>
+                </tr>
+            <tr class="myrow">
+                <td>
+                   
+                    <table cellpadding="10px">
+                        <tr>
+                            <td> <button class="btn btn-primary btn-lg" id="left">Spin Left</button></td>
+                            <td> <button class="btn btn-primary btn-lg" id="right">Spin Right</button></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="myrow">
+                
+                    <br /><br />
+                <td> <button class="btn btn-primary btn-lg stop-btn" id="stop">Stop</button></td>
+               
+              
+            </tr>
+
+        </table>
+
+
+</body>
+<script>
+    $('#MyBot').click(function () {
+        location.reload();
+    });
+</script>
+</html>
